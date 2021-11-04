@@ -197,8 +197,64 @@ body {
   font-size: 18px;
 }
 
+#footer {
+  height: 100px;
+  background: black;
+}
 
-#footer{
-    height: 100px;
-    background:black;
+button:hover {
+  cursor: pointer;
+}
+
+
+.placeholder-img p::before {
+  content: " Welcome ";
+  display: block;
+  overflow: hidden;
+  width: 0%;
+  position: relative;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  animation: typewriter 10s steps(25) 1s normal both infinite,
+    blinkingCursor 0.5s steps(40) infinite;
+}
+
+@keyframes typewriter {
+  0% {
+    content: "Welcome to my website";
+    width: 0%;
+  }
+
+  5%,
+  40% {
+    content: "Welcome to my website";
+    width: 100%;
+  }
+
+  45%,
+  55% {
+    content: "This is a placeholder for an image";
+    width: 0%;
+  }
+
+  60%,
+  95% {
+    content: "This is a placeholder for an image";
+    width: 100%;
+  }
+
+  96%,
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes blinkingCursor {
+  from {
+    border-right-color: var(--header-bg-color);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
 }
