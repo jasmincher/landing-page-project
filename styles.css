@@ -196,3 +196,9 @@ body {
   font-weight: 500;
   font-size: 18px;
 }
+
+
+#footer{
+    height: 100px;
+    background:black;
+}
